@@ -1,0 +1,20 @@
+/VueTestUtils/
+
+Monta o componente e devolve uma API, que posso fazer tudo como: (setar propriedades, states, verificar se um evento foi emitido, manipular formulários)
+
+//wrapper.html()
+da todo meu html da página
+
+//STUBS vai nos dizer se o resultado do código retorna de acordo com os parâmetros passado, se retorna sucesso, erro ou exceção por exemplo, é previsível.
+
+//MOCKS: quando queremos saber se uma função vai ser chamada corretamente, quantas vezes ela vai ser chamada, se os parâmetros esperados são os corretos.
+{
+    mocks: {
+        $cart: cartManager,
+      },
+}
+
+//jest.spyOn : faz a simulação de alguma funcionalidade, neste caso simulamos o Local Storage.
+{
+    const spy1 = jest.spyOn(cartManager, 'open');
+}
